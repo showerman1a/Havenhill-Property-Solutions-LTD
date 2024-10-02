@@ -7,79 +7,94 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    color: #e0e0e0; /* Light text color */
-    background-color: #1c1f26; /* Dark blue background */
+    background-color: #f5f5f5; /* Light background for brightness */
+    color: #333; /* Dark text for readability */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffd700; /* Gold background for header */
+    padding: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1c1f26; /* Dark text for links */
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #333; /* Darker on hover */
 }
 
 /* Hero Section */
-.hero-section {
-    height: 100vh;
-    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
-    position: relative;
+.hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover; /* Placeholder image */
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
     text-align: center;
-    color: #f4f4f4; /* Light text for readability */
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay for a sleek look */
-    z-index: 1;
+.hero-content {
+    max-width: 600px;
 }
 
-.hero-title {
-    font-size: 64px;
-    z-index: 2;
-    font-weight: 700;
-    color: #ffd700; /* Gold color for the title */
-    letter-spacing: 1.5px;
-    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
 }
 
-.hero-subtitle {
+.gold-text {
     font-size: 24px;
-    margin: 20px 0;
-    z-index: 2;
-    color: #f4f4f4;
+    color: #ffd700; /* Gold text */
 }
 
 .cta-btn {
     display: inline-block;
     background-color: #ffd700; /* Gold button */
     color: #1c1f26; /* Dark button text */
-    padding: 15px 40px;
+    padding: 15px 30px;
     border-radius: 30px;
     text-transform: uppercase;
     font-weight: bold;
-    z-index: 2;
-    font-size: 18px;
     text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
 }
 
 .cta-btn:hover {
     background-color: #ffdd57; /* Brighter gold on hover */
-    transform: translateY(-5px);
 }
 
 /* Featured Properties Section */
 .featured-properties {
-    padding: 70px 0;
-    background-color: #2b2f38; /* Darker background for contrast */
+    padding: 60px 20px;
     text-align: center;
+    background-color: #ffffff; /* White background for contrast */
 }
 
 .featured-properties h2 {
-    font-size: 48px;
+    font-size: 36px;
     margin-bottom: 40px;
-    color: #ffd700; /* Gold heading */
 }
 
 .property-grid {
@@ -87,119 +102,99 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 30px;
-    padding: 0 20px;
 }
 
 .property {
-    background-color: #1f232a; /* Dark card background */
-    border-radius: 12px;
-    width: 30%;
-    padding: 30px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    background-color: #f7f7f7; /* Light gray background for property cards */
+    border: 1px solid #ddd; /* Light border for definition */
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 calc(30% - 30px); /* Responsive sizing */
+    min-width: 250px; /* Minimum width for small screens */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .property:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 .property h3 {
-    font-size: 28px;
-    margin-bottom: 15px;
-    color: #ffd700; /* Gold heading for property titles */
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .property p {
     font-size: 16px;
-    color: #e0e0e0; /* Light text for readability */
-    line-height: 1.6;
+    margin-bottom: 10px;
 }
 
-/* Why Choose Us Section */
-.why-choose-us {
-    padding: 70px 20px;
-    background-color: #1c1f26; /* Matches overall dark theme */
+.learn-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ffd700; /* Gold link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.learn-more:hover {
+    text-decoration: underline;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 40px 20px;
     text-align: center;
+    background-color: #f5f5f5; /* Light background for contrast */
 }
 
-.why-choose-us h2 {
-    font-size: 48px;
-    margin-bottom: 40px;
-    color: #ffd700; /* Gold heading */
+.about-us h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
-.why-choose-us p {
-    font-size: 20px;
-    color: #e0e0e0; /* Light text */
-    line-height: 1.8;
-    max-width: 800px;
-    margin: 0 auto;
-    margin-bottom: 50px;
+/* Contact Section */
+.contact {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffffff; /* White background for contrast */
 }
 
-.features {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 30px;
-    padding: 0 20px;
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
-.feature {
-    width: 30%;
-    padding: 20px;
-    background-color: #2b2f38; /* Dark feature card */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 12px;
-    transition: all 0.3s ease;
-}
-
-.feature:hover {
-    transform: translateY(-10px);
-}
-
-.feature h3 {
-    font-size: 24px;
-    color: #ffd700; /* Gold heading */
-    margin-bottom: 15px;
-}
-
-.feature p {
-    font-size: 16px;
-    color: #e0e0e0; /* Light text */
+.contact a {
+    color: #ffd700; /* Gold links */
+    text-decoration: none;
 }
 
 /* Footer */
 footer {
-    background-color: #1c1f26;
-    color: #ffd700; /* Gold text in the footer */
+    background-color: #1c1f26; /* Dark background for footer */
+    color: #ffffff; /* White text for footer */
     text-align: center;
     padding: 20px 0;
 }
 
 footer p {
     font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
-    .property-grid, .features {
+    .property-grid {
         flex-direction: column;
         align-items: center;
     }
 
-    .property, .feature {
-        width: 100%;
+    .property {
+        width: 90%;
         margin-bottom: 20px;
     }
 
-    .hero-title {
-        font-size: 48px;
-    }
-
-    .hero-subtitle {
-        font-size: 18px;
+    .hero h1 {
+        font-size: 36px;
     }
 }
