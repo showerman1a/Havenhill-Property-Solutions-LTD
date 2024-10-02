@@ -1,200 +1,185 @@
 /* General Styles */
-* {
+body {
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #0f0f0f; /* Dark background */
+    color: #f0f0f0; /* Light text color */
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5; /* Light background for brightness */
-    color: #333; /* Dark text for readability */
-}
-
-/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #ffd700; /* Gold background for header */
     padding: 20px;
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.7);
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+.logo h1 {
+    color: #ffcc00; /* Gold color for logo text */
+    margin: 0;
+    font-family: 'Playfair Display', serif; /* Elegant font for logo */
 }
 
 nav ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin-left: 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #1c1f26; /* Dark text for links */
+    color: #f0f0f0;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #333; /* Darker on hover */
+    color: #ffcc00; /* Gold color for hover effect */
 }
 
 /* Hero Section */
 .hero {
-    height: 70vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover; /* Placeholder image */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
     text-align: center;
-}
-
-.hero-content {
-    max-width: 600px;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1a1a1a, #333333);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: 3.5em;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7);
+    color: #ffcc00; /* Gold color for hero heading */
+}
+
+.hero p {
+    font-size: 1.8em;
     margin-bottom: 20px;
+    color: #f0f0f0; /* Light color for hero paragraph */
 }
 
-.gold-text {
-    font-size: 24px;
-    color: #ffd700; /* Gold text */
-}
-
-.cta-btn {
+.btn-primary {
     display: inline-block;
-    background-color: #ffd700; /* Gold button */
-    color: #1c1f26; /* Dark button text */
     padding: 15px 30px;
-    border-radius: 30px;
-    text-transform: uppercase;
+    background-color: #ffcc00;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
     font-weight: bold;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
-.cta-btn:hover {
-    background-color: #ffdd57; /* Brighter gold on hover */
+.btn-primary:hover {
+    background-color: #e6b800; /* Darker gold on hover */
 }
 
-/* Featured Properties Section */
-.featured-properties {
-    padding: 60px 20px;
-    text-align: center;
-    background-color: #ffffff; /* White background for contrast */
-}
-
-.featured-properties h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-
-.property-grid {
+/* Property Listings */
+.property-list {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 30px;
-}
-
-.property {
-    background-color: #f7f7f7; /* Light gray background for property cards */
-    border: 1px solid #ddd; /* Light border for definition */
-    border-radius: 10px;
+    justify-content: space-around;
     padding: 20px;
-    flex: 1 1 calc(30% - 30px); /* Responsive sizing */
-    min-width: 250px; /* Minimum width for small screens */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
 }
 
-.property:hover {
+.property-card {
+    background-color: #1c1c1c;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    flex: 1 1 calc(30% - 30px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.property-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
 }
 
-.property h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
+.property-card h3 {
+    font-size: 1.5em;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
-.property p {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.learn-more {
+.btn-secondary {
     display: inline-block;
-    margin-top: 10px;
-    color: #ffd700; /* Gold link */
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
 }
 
-.learn-more:hover {
-    text-decoration: underline;
+.btn-secondary:hover {
+    background-color: #e6b800; /* Darker gold on hover */
 }
 
-/* About Us Section */
-.about-us {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #f5f5f5; /* Light background for contrast */
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-.about-us h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+form label {
+    margin-top: 10px;
 }
 
-/* Contact Section */
-.contact {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #ffffff; /* White background for contrast */
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #1c1c1c;
+    color: #f0f0f0;
 }
 
-.contact h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffcc00;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.contact a {
-    color: #ffd700; /* Gold links */
-    text-decoration: none;
+form button:hover {
+    background-color: #e6b800; /* Darker gold on hover */
 }
 
 /* Footer */
 footer {
-    background-color: #1c1f26; /* Dark background for footer */
-    color: #ffffff; /* White text for footer */
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
+    background-color: #1a1a1a;
 }
 
-footer p {
-    font-size: 16px;
-}
-
-/* Media Queries */
+/* Responsive Design */
 @media (max-width: 768px) {
-    .property-grid {
+    .property-list {
         flex-direction: column;
         align-items: center;
     }
 
-    .property {
+    .property-card {
         width: 90%;
-        margin-bottom: 20px;
     }
 
     .hero h1 {
-        font-size: 36px;
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
     }
 }
