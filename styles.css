@@ -69,7 +69,7 @@ body {
     transform: translateY(-5px);
 }
 
-/* Properties Section */
+/* Featured Properties Section */
 .featured-properties {
     padding: 70px 0;
     background-color: #2b2f38; /* Darker background for contrast */
@@ -80,14 +80,14 @@ body {
     font-size: 48px;
     margin-bottom: 40px;
     color: #ffd700; /* Gold heading */
-    position: relative;
 }
 
 .property-grid {
     display: flex;
-    justify-content: space-around;
-    gap: 30px;
+    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 20px;
 }
 
 .property {
@@ -117,7 +117,7 @@ body {
 
 /* Why Choose Us Section */
 .why-choose-us {
-    padding: 70px 0;
+    padding: 70px 20px;
     background-color: #1c1f26; /* Matches overall dark theme */
     text-align: center;
 }
@@ -142,6 +142,7 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 30px;
+    padding: 0 20px;
 }
 
 .feature {
@@ -150,6 +151,11 @@ body {
     background-color: #2b2f38; /* Dark feature card */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
 }
 
 .feature h3 {
