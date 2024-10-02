@@ -63,6 +63,49 @@ header p {
     transition: transform 0.2s ease-in-out;
 }
 
-.property img {
-    width: 100%;
-    border-
+.property h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.property p {
+    font-size: 16px;
+}
+
+.property:hover {
+    transform: scale(1.05);
+}
+
+/* About Section */
+#about {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 36px;
+    color: #004aad;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #004aad;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 14px;
+}
