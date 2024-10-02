@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    color: #333;
-    background-color: #f4f4f4;
+    color: #e0e0e0; /* Light text color */
+    background-color: #1c1f26; /* Dark blue background */
 }
 
 /* Hero Section */
@@ -20,7 +20,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #fff;
+    color: #f4f4f4; /* Light text for readability */
 }
 
 .overlay {
@@ -29,7 +29,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for a sleek look */
     z-index: 1;
 }
 
@@ -37,6 +37,7 @@ body {
     font-size: 64px;
     z-index: 2;
     font-weight: 700;
+    color: #ffd700; /* Gold color for the title */
     letter-spacing: 1.5px;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
 }
@@ -45,12 +46,13 @@ body {
     font-size: 24px;
     margin: 20px 0;
     z-index: 2;
+    color: #f4f4f4;
 }
 
 .cta-btn {
     display: inline-block;
-    background-color: #ffdd57;
-    color: #333;
+    background-color: #ffd700; /* Gold button */
+    color: #1c1f26; /* Dark button text */
     padding: 15px 40px;
     border-radius: 30px;
     text-transform: uppercase;
@@ -63,21 +65,21 @@ body {
 }
 
 .cta-btn:hover {
-    background-color: #f1c40f;
+    background-color: #ffdd57; /* Brighter gold on hover */
     transform: translateY(-5px);
 }
 
 /* Properties Section */
 .featured-properties {
     padding: 70px 0;
-    background-color: #fff;
+    background-color: #2b2f38; /* Darker background for contrast */
     text-align: center;
 }
 
 .featured-properties h2 {
     font-size: 48px;
     margin-bottom: 40px;
-    color: #004aad;
+    color: #ffd700; /* Gold heading */
     position: relative;
 }
 
@@ -89,7 +91,7 @@ body {
 }
 
 .property {
-    background-color: #f8f9fa;
+    background-color: #1f232a; /* Dark card background */
     border-radius: 12px;
     width: 30%;
     padding: 30px;
@@ -104,31 +106,31 @@ body {
 .property h3 {
     font-size: 28px;
     margin-bottom: 15px;
-    color: #333;
+    color: #ffd700; /* Gold heading for property titles */
 }
 
 .property p {
     font-size: 16px;
-    color: #666;
+    color: #e0e0e0; /* Light text for readability */
     line-height: 1.6;
 }
 
 /* Why Choose Us Section */
 .why-choose-us {
     padding: 70px 0;
-    background-color: #f0f2f5;
+    background-color: #1c1f26; /* Matches overall dark theme */
     text-align: center;
 }
 
 .why-choose-us h2 {
     font-size: 48px;
     margin-bottom: 40px;
-    color: #004aad;
+    color: #ffd700; /* Gold heading */
 }
 
 .why-choose-us p {
     font-size: 20px;
-    color: #555;
+    color: #e0e0e0; /* Light text */
     line-height: 1.8;
     max-width: 800px;
     margin: 0 auto;
@@ -145,26 +147,26 @@ body {
 .feature {
     width: 30%;
     padding: 20px;
-    background-color: #fff;
+    background-color: #2b2f38; /* Dark feature card */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
 }
 
 .feature h3 {
     font-size: 24px;
-    color: #004aad;
+    color: #ffd700; /* Gold heading */
     margin-bottom: 15px;
 }
 
 .feature p {
     font-size: 16px;
-    color: #555;
+    color: #e0e0e0; /* Light text */
 }
 
 /* Footer */
 footer {
-    background-color: #004aad;
-    color: #fff;
+    background-color: #1c1f26;
+    color: #ffd700; /* Gold text in the footer */
     text-align: center;
     padding: 20px 0;
 }
