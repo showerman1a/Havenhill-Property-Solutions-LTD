@@ -3,13 +3,14 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9; /* Light background */
-    color: #333333; /* Black text color */
+    background-color: #f4f4f4; /* Light background */
+    color: #333; /* Dark text color */
 }
 
 header {
-    background-color: #333333; /* Dark background for header */
+    background-color: #444; /* Dark background for header */
     padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
@@ -38,14 +39,16 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 60px 20px;
-    background-color: #ffcc00; /* Gold background */
-    color: #333333; /* Dark text */
+    padding: 80px 20px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background-image.jpg');
+    background-size: cover;
+    color: #ffcc00; /* Gold text */
 }
 
 .hero h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
@@ -56,7 +59,7 @@ nav ul li a:hover {
 .btn-primary {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #333333; /* Dark button */
+    background-color: #333; /* Dark button */
     color: #ffffff; /* White text */
     border: none;
     border-radius: 5px;
@@ -66,20 +69,31 @@ nav ul li a:hover {
 }
 
 .btn-primary:hover {
-    background-color: #555555; /* Lighter dark on hover */
+    background-color: #555; /* Lighter dark on hover */
 }
 
 /* Properties Section */
 .properties {
     padding: 40px 20px;
+    text-align: center;
+}
+
+.properties h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 .property-item {
-    margin-bottom: 20px;
     background: #ffffff; /* White background */
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.property-item:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
 }
 
 .property-item h3 {
@@ -87,21 +101,26 @@ nav ul li a:hover {
 }
 
 .property-item p {
-    color: #666666; /* Grey text for description */
+    color: #666; /* Grey text for description */
 }
 
 /* Contact Info Section */
 .contact-info {
     padding: 40px 20px;
-    background-color: #f0e5d8; /* Light cream background */
+    background-color: #eaeaea; /* Light grey background */
     text-align: center;
+}
+
+.contact-info h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333333; /* Dark background for footer */
+    background-color: #333; /* Dark background for footer */
     color: #ffffff; /* White text */
 }
 
