@@ -3,13 +3,12 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9; /* Light cream background */
+    background-color: #f9f9f9; /* Light background */
     color: #333333; /* Black text color */
 }
 
 header {
-    background-color: #f0e5d8; /* Lighter cream */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #333333; /* Dark background for header */
     padding: 20px;
 }
 
@@ -27,47 +26,38 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333333; /* Black text for links */
+    color: #ffcc00; /* Gold color for links */
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffcc00; /* Gold color for hover effect */
+    color: #e6b800; /* Darker gold on hover */
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 60px 20px;
-    background-color: #333333; /* Dark background */
-    color: #ffffff; /* White text */
+    background-color: #ffcc00; /* Gold background */
+    color: #333333; /* Dark text */
 }
 
-.logo h1 {
-    font-size: 3em;
+.hero h1 {
+    font-size: 2.5em;
     margin: 0;
 }
 
-.hero-content {
-    margin-top: 20px;
-}
-
-.hero-content h2 {
-    font-size: 2.5em;
-    margin: 10px 0;
-}
-
-.hero-content p {
+.hero p {
     font-size: 1.5em;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 .btn-primary {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #ffcc00; /* Gold button */
-    color: #121212; /* Dark text */
+    background-color: #333333; /* Dark button */
+    color: #ffffff; /* White text */
     border: none;
     border-radius: 5px;
     font-weight: bold;
@@ -76,71 +66,64 @@ nav ul li a:hover {
 }
 
 .btn-primary:hover {
-    background-color: #e6b800; /* Darker gold on hover */
+    background-color: #555555; /* Lighter dark on hover */
 }
 
-/* Collage Section */
-.collage {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
-    padding: 40px;
+/* Properties Section */
+.properties {
+    padding: 40px 20px;
 }
 
-.collage-item {
-    background: #fff;
+.property-item {
+    margin-bottom: 20px;
+    background: #ffffff; /* White background */
+    padding: 15px;
     border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.collage-item h3 {
-    margin: 0 0 10px;
+.property-item h3 {
+    margin: 0;
 }
 
-.collage-item p {
+.property-item p {
     color: #666666; /* Grey text for description */
 }
 
-/* Cut Paper Effect */
-.collage-item::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    background: #f0e5d8; /* Lighter cream background */
-    z-index: -1;
-    filter: blur(5px);
-    transform: rotate(-3deg);
-}
-
-.collage-item:hover {
-    transform: translateY(-5px);
+/* Contact Info Section */
+.contact-info {
+    padding: 40px 20px;
+    background-color: #f0e5d8; /* Light cream background */
+    text-align: center;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #f0e5d8; /* Lighter cream */
+    background-color: #333333; /* Dark background for footer */
+    color: #ffffff; /* White text */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero-content h2 {
+    .hero h1 {
         font-size: 2em;
     }
 
-    .hero-content p {
+    .hero p {
         font-size: 1.2em;
     }
 
-    .collage-item {
-        padding: 15px;
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .property-item {
+        padding: 10px;
     }
 }
