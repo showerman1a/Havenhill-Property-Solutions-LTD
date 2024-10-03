@@ -3,7 +3,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* Cream background */
+    background-color: #f9f9f9; /* Light cream background */
     color: #333333; /* Black text color */
 }
 
@@ -79,33 +79,48 @@ nav ul li a:hover {
     background-color: #e6b800; /* Darker gold on hover */
 }
 
-/* Property Listings */
-#properties {
+/* Collage Section */
+.collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
     padding: 40px;
 }
 
-.property-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.collage-item {
+    background: #fff;
+    border-radius: 10px;
     padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
 }
 
-.property-card {
-    background-color: #f9f9f9; /* Light card background */
-    margin: 15px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(30% - 30px);
+.collage-item h3 {
+    margin: 0 0 10px;
 }
 
-.property-card h3 {
-    margin: 10px 0;
-}
-
-.property-card p {
+.collage-item p {
     color: #666666; /* Grey text for description */
+}
+
+/* Cut Paper Effect */
+.collage-item::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: #f0e5d8; /* Lighter cream background */
+    z-index: -1;
+    filter: blur(5px);
+    transform: rotate(-3deg);
+}
+
+.collage-item:hover {
+    transform: translateY(-5px);
 }
 
 /* Footer */
@@ -115,59 +130,17 @@ footer {
     background-color: #f0e5d8; /* Lighter cream */
 }
 
-/* Contact Form */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-form label {
-    margin: 10px 0 5px;
-    font-weight: bold;
-}
-
-form input, form textarea {
-    width: 80%;
-    max-width: 400px;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #cccccc; /* Light border */
-    border-radius: 5px;
-}
-
-form button {
-    padding: 10px 20px;
-    background-color: #ffcc00; /* Gold button */
-    color: #121212; /* Dark text */
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #e6b800; /* Darker gold on hover */
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-    .property-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .property-card {
-        width: 90%;
-    }
-
     .hero-content h2 {
         font-size: 2em;
     }
 
     .hero-content p {
         font-size: 1.2em;
+    }
+
+    .collage-item {
+        padding: 15px;
     }
 }
